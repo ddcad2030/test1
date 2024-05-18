@@ -14,5 +14,5 @@ func main() {
 }
 
 func getEvents(c *gin.Context) {
-	c.JSON(http.StatusOK, gin.H{"message": "event"})
+	c.JSON(http.StatusOK, gin.H{"message": "github ssh key"})
 }
