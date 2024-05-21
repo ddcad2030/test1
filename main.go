@@ -1,18 +1,15 @@
 package main
 
 import (
-	"net/http"
+	"rest-api/db"
+	"rest-api/routes"
 
 	"github.com/gin-gonic/gin"
 )
 
 func main() {
+	db.InitDB()
 	server := gin.Default()
-	server.GET("/events", getEvents)
+	routes.RegisterRoutes(server)
 	server.Run(":8000")
-
-}
-
-func getEvents(c *gin.Context) {
-	c.JSON(http.StatusOK, gin.H{"message": "github ssh key"})
 }
