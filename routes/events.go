@@ -107,10 +107,6 @@ func cancelRegisterEvent(c *gin.Context) {
 
 }
 
-func signup(c *gin.Context) {
-
-}
-
 func login(c *gin.Context) {
 
 }
